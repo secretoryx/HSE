@@ -1,0 +1,10 @@
+{
+  "name": "labotel-hse-dashboard",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Advanced Labotel HSE management dashboard",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  }
+}

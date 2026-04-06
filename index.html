@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SentriQ HSE Command Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">
+          <img src="https://labotel.ae/assets/img/logo.png" alt="Labotel logo" />
+        </div>
+        <div>
+          <p class="eyebrow">Health, Safety & Environment</p>
+          <h1>Labotel HSE</h1>
+        </div>
+      </div>
+      <div class="site-switcher">
+        <div>
+          <span class="label">Active site</span>
+          <strong>Labotel Workers Village</strong>
+        </div>
+        <span class="status-pill status-live">Live</span>
+      </div>
+      <nav class="nav">
+        <button class="nav-link active" data-section="overview">Overview</button>
+        <button class="nav-link" data-section="observations">Observations</button>
+        <button class="nav-link" data-section="incidents">Incidents</button>
+        <button class="nav-link" data-section="permits">Permit to Work</button>
+        <button class="nav-link" data-section="activities">Activities</button>
+        <button class="nav-link" data-section="fire-alarms">Fire Alarm Register</button>
+        <button class="nav-link" data-section="formulas">HSE Formulas</button>
+        <button class="nav-link" data-section="risk">Risk Register</button>
+        <button class="nav-link" data-section="audits">Audits & Inspections</button>
+        <button class="nav-link" data-section="training">Training</button>
+        <button class="nav-link" data-section="assets">Assets & PPE</button>
+        <button class="nav-link" data-section="documents">Documents</button>
+        <button class="nav-link" data-section="staff">Staff Management</button>
+        <button class="nav-link" data-section="people">People & Contractors</button>
+        <button class="nav-link" data-section="settings">Settings</button>
+      </nav>
+      <div class="sidebar-card">
+        <p class="label">This shift</p>
+        <strong>192 workers on site</strong>
+        <p>2 critical controls require verification before night operations.</p>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Admin dashboard</p>
+          <h2 id="page-title">Labotel HSE Command Overview</h2>
+        </div>
+        <div class="topbar-actions">
+          <span class="deploy-badge">Hosting Ready</span>
+          <button class="ghost-btn" data-action="export">Export</button>
+          <button class="ghost-btn" data-action="filter">Filter</button>
+          <button class="primary-btn" data-action="createAction">Create Action</button>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Labotel safety pulse</p>
+          <h3>Integrated HSE management for accommodation operations, contractors, permits, competency, and compliance.</h3>
+          <p>
+            Built for HSE officers, accommodation management, facilities operations, and contractor teams with live visibility over open actions,
+            permit risk, workforce readiness, welfare controls, and audit performance.
+          </p>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-metric"><span>Total TRIR</span><strong>0.41</strong></div>
+          <div class="hero-metric"><span>Open actions</span><strong>18</strong></div>
+          <div class="hero-metric"><span>Compliance score</span><strong>94%</strong></div>
+        </div>
+      </section>
+
+      <section class="content-section active" id="overview">
+        <div class="kpi-grid">
+          <article class="kpi-card accent-green"><p>Total observations</p><strong>148</strong><span>+12 this week</span></article>
+          <article class="kpi-card accent-amber"><p>Open incidents</p><strong>4</strong><span>1 high severity under investigation</span></article>
+          <article class="kpi-card accent-blue"><p>Active permits</p><strong>23</strong><span>6 hot work, 5 confined space, 4 lifting</span></article>
+          <article class="kpi-card accent-rose"><p>Training due in 7 days</p><strong>29</strong><span>Mostly scaffold and work-at-height refreshers</span></article>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="panel-card span-2">
+            <div class="panel-header">
+              <div><p class="eyebrow">Trend</p><h3>Leading indicators</h3></div>
+              <span class="badge positive">Improving month over month</span>
+            </div>
+            <div class="trend-chart">
+              <div class="chart-col"><span class="bar bar-green" style="height: 64%"></span><label>Observations</label><small>41</small></div>
+              <div class="chart-col"><span class="bar bar-lime" style="height: 78%"></span><label>Inspections</label><small>56</small></div>
+              <div class="chart-col"><span class="bar bar-amber" style="height: 43%"></span><label>Actions</label><small>18</small></div>
+              <div class="chart-col"><span class="bar bar-blue" style="height: 58%"></span><label>Toolbox Talks</label><small>33</small></div>
+              <div class="chart-col"><span class="bar bar-red" style="height: 22%"></span><label>Incidents</label><small>4</small></div>
+            </div>
+          </article>
+
+          <article class="panel-card">
+            <div class="panel-header"><div><p class="eyebrow">Status</p><h3>Control effectiveness</h3></div></div>
+            <div class="donut-wrap">
+              <div class="donut" data-percent="94"><span>94%</span></div>
+              <ul class="mini-list">
+                <li><span>Critical controls verified</span><strong>31 / 33</strong></li>
+                <li><span>Permit isolations confirmed</span><strong>19 / 23</strong></li>
+                <li><span>Emergency drills complete</span><strong>7 / 8</strong></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="panel-card span-2">
+            <div class="panel-header"><div><p class="eyebrow">Attention needed</p><h3>Critical workboard</h3></div><button class="text-btn" data-action="viewAllCritical">View all</button></div>
+            <div class="workboard">
+              <div class="task danger"><strong>Confined space gas test overdue</strong><p>PTW-219 | Utility tunnel section C | Owner: Omar Nasser</p></div>
+              <div class="task warn"><strong>Excavation shoring inspection pending</strong><p>Area B trench line | Due in 35 minutes | Supervisor: Elena Cruz</p></div>
+              <div class="task"><strong>Subcontractor induction batch incomplete</strong><p>9 workers not cleared for tomorrow’s concrete pour</p></div>
+            </div>
+          </article>
+
+          <article class="panel-card">
+            <div class="panel-header"><div><p class="eyebrow">Today</p><h3>Shift snapshot</h3></div></div>
+            <ul class="mini-list">
+              <li><span>Day shift attendance</span><strong>192</strong></li>
+              <li><span>Toolbox talks delivered</span><strong>14</strong></li>
+              <li><span>Visitors on site</span><strong>11</strong></li>
+              <li><span>PPE exceptions raised</span><strong>3</strong></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="observations">
+        <div class="section-head"><div><p class="eyebrow">Field reporting</p><h3>Observations management</h3></div><button class="primary-btn" data-action="addObservation">Add Observation</button></div>
+        <div class="split-grid">
+          <article class="panel-card">
+            <div class="panel-header"><h3>Observation mix</h3></div>
+            <ul class="mini-list">
+              <li><span>Open observations</span><strong>17</strong></li>
+              <li><span>Positive interventions</span><strong>42</strong></li>
+              <li><span>Unsafe conditions</span><strong>23</strong></li>
+              <li><span>Behavioral observations</span><strong>66</strong></li>
+            </ul>
+          </article>
+          <article class="panel-card">
+            <div class="panel-header"><h3>Risk band distribution</h3></div>
+            <div class="h-bars">
+              <div><span>Low</span><i style="width: 78%"></i><strong>51</strong></div>
+              <div><span>Medium</span><i style="width: 56%"></i><strong>36</strong></div>
+              <div><span>High</span><i style="width: 34%"></i><strong>22</strong></div>
+              <div><span>Critical</span><i style="width: 12%"></i><strong>8</strong></div>
+            </div>
+          </article>
+        </div>
+        <article class="panel-card">
+          <div class="panel-header"><h3>Recent observation log</h3><span class="badge neutral">Updated 10 minutes ago</span></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>ID</th><th>Status</th><th>Category</th><th>Risk</th><th>Raised By</th><th>Area</th><th>Due</th><th>Actions</th></tr></thead>
+              <tbody id="observations-table-body">
+                <tr><td>OBS-402</td><td><span class="status-pill status-open">Open</span></td><td>Scaffold tag missing</td><td>High</td><td>Fatima Al Mansouri</td><td>Zone 4 gantry</td><td>06 Apr 2026</td><td><div class="table-actions"><button class="table-btn table-btn-view" data-action="viewObservation" data-record-id="OBS-402">View</button><button class="table-btn table-btn-edit" data-action="editObservation" data-record-id="OBS-402">Edit</button></div></td></tr>
+                <tr><td>OBS-398</td><td><span class="status-pill status-progress">In Review</span></td><td>PPE compliance</td><td>Medium</td><td>John K. Reyes</td><td>Batching plant</td><td>07 Apr 2026</td><td><div class="table-actions"><button class="table-btn table-btn-view" data-action="viewObservation" data-record-id="OBS-398">View</button><button class="table-btn table-btn-edit" data-action="editObservation" data-record-id="OBS-398">Edit</button></div></td></tr>
+                <tr><td>OBS-389</td><td><span class="status-pill status-closed">Closed</span></td><td>Positive intervention</td><td>Low</td><td>Nadia Saleh</td><td>North yard</td><td>Closed</td><td><div class="table-actions"><button class="table-btn table-btn-view" data-action="viewObservation" data-record-id="OBS-389">View</button><button class="table-btn table-btn-edit" data-action="editObservation" data-record-id="OBS-389">Edit</button></div></td></tr>
+                <tr><td>OBS-377</td><td><span class="status-pill status-open">Open</span></td><td>Housekeeping gap</td><td>Medium</td><td>Omar Nasser</td><td>Pump station</td><td>08 Apr 2026</td><td><div class="table-actions"><button class="table-btn table-btn-view" data-action="viewObservation" data-record-id="OBS-377">View</button><button class="table-btn table-btn-edit" data-action="editObservation" data-record-id="OBS-377">Edit</button></div></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-section" id="incidents">
+        <div class="section-head"><div><p class="eyebrow">Event management</p><h3>Incidents and investigations</h3></div><button class="primary-btn" data-action="reportIncident">Report Incident</button></div>
+        <div class="kpi-grid compact">
+          <article class="kpi-card accent-red"><p>Total recordables</p><strong>3</strong><span>YTD</span></article>
+          <article class="kpi-card accent-amber"><p>Near misses</p><strong>12</strong><span>5 require action closure</span></article>
+          <article class="kpi-card accent-blue"><p>Motor vehicle events</p><strong>1</strong><span>No lost time</span></article>
+          <article class="kpi-card accent-green"><p>Days since LTI</p><strong>214</strong><span>Current streak</span></article>
+        </div>
+        <article class="panel-card">
+          <div class="panel-header"><h3>Investigation tracker</h3><span class="badge warning">1 overdue RCA</span></div>
+          <div class="timeline" id="incident-timeline">
+            <div class="timeline-item danger"><strong>INC-118 | Dropped object from level 6</strong><p>Severity: High | Status: Investigation open | Root cause review overdue by 1 day</p></div>
+            <div class="timeline-item"><strong>INC-115 | Vehicle reversing collision</strong><p>Severity: Moderate | CAPA assigned to logistics manager | 80% complete</p></div>
+            <div class="timeline-item"><strong>INC-111 | Heat stress first aid case</strong><p>Severity: Minor | Closed with revised hydration break controls</p></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-section" id="permits">
+        <div class="section-head"><div><p class="eyebrow">High-risk work control</p><h3>Permit to work system</h3></div><button class="primary-btn" data-action="issuePermit">Issue Permit</button></div>
+        <div class="split-grid">
+          <article class="panel-card">
+            <div class="panel-header"><h3>Permit summary</h3></div>
+            <ul class="mini-list">
+              <li><span>Open permits</span><strong>23</strong></li>
+              <li><span>Suspended permits</span><strong>2</strong></li>
+              <li><span>Expired today</span><strong>4</strong></li>
+              <li><span>Isolations verified</span><strong>19</strong></li>
+            </ul>
+          </article>
+          <article class="panel-card">
+            <div class="panel-header"><h3>Permit type exposure</h3></div>
+            <div class="h-bars">
+              <div><span>Hot work</span><i style="width: 72%"></i><strong>6</strong></div>
+              <div><span>Confined space</span><i style="width: 61%"></i><strong>5</strong></div>
+              <div><span>Lifting</span><i style="width: 49%"></i><strong>4</strong></div>
+              <div><span>Excavation</span><i style="width: 37%"></i><strong>3</strong></div>
+              <div><span>Electrical</span><i style="width: 23%"></i><strong>2</strong></div>
+            </div>
+          </article>
+        </div>
+        <article class="panel-card">
+          <div class="panel-header"><h3>Active permit register</h3><span class="badge neutral">Live sync enabled</span></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Permit No.</th><th>Type</th><th>Location</th><th>Issuer</th><th>Receiver</th><th>Valid Until</th><th>Status</th><th>Actions</th></tr></thead>
+              <tbody id="permits-table-body">
+                <tr><td>PTW-219</td><td>Confined Space</td><td>Utility tunnel C</td><td>H. Rahman</td><td>Omar Nasser</td><td>06 Apr 2026, 18:00</td><td><span class="status-pill status-open">Open</span></td><td><div class="table-actions"><button class="table-btn table-btn-view" data-action="viewPermit">View</button><button class="table-btn table-btn-edit" data-action="editPermit">Edit</button></div></td></tr>
+                <tr><td>PTW-214</td><td>Hot Work</td><td>Plant room 2</td><td>L. Haddad</td><td>Jason Cole</td><td>06 Apr 2026, 16:00</td><td><span class="status-pill status-progress">Extended</span></td><td><div class="table-actions"><button class="table-btn table-btn-view" data-action="viewPermit">View</button><button class="table-btn table-btn-edit" data-action="editPermit">Edit</button></div></td></tr>
+                <tr><td>PTW-207</td><td>Lifting</td><td>North crane pad</td><td>Elena Cruz</td><td>Khaled Issa</td><td>06 Apr 2026, 19:30</td><td><span class="status-pill status-closed">Active</span></td><td><div class="table-actions"><button class="table-btn table-btn-view" data-action="viewPermit">View</button><button class="table-btn table-btn-edit" data-action="editPermit">Edit</button></div></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-section" id="activities">
+        <div class="section-head"><div><p class="eyebrow">Engagement</p><h3>Activities and training records</h3></div><button class="primary-btn" data-action="addActivity">Add New Activity</button></div>
+        <div class="kpi-grid compact">
+          <article class="kpi-card accent-green"><p>Total activities</p><strong>8</strong><span>Recorded this month</span></article>
+          <article class="kpi-card accent-blue"><p>Total attendees</p><strong>145</strong><span>Across talks, drills, inductions</span></article>
+          <article class="kpi-card accent-amber"><p>Total hours</p><strong>157.25</strong><span>Auto-calculated duration hours</span></article>
+          <article class="kpi-card accent-rose"><p>Manager participation</p><strong>61%</strong><span>Leadership attendance rate</span></article>
+        </div>
+        <article class="panel-card">
+          <div class="panel-header"><h3>Activities list</h3><span class="badge neutral">Live activity register</span></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>ID</th><th>Activity</th><th>Delivered By</th><th>Attendees</th><th>Hours</th><th>Location</th><th>Actions</th></tr></thead>
+              <tbody id="activities-table-body">
+                <tr><td>1</td><td>Safety Training</td><td>Sarah Johnson</td><td>18</td><td>2.50</td><td>Main Building</td><td><div class="table-actions"><button class="table-btn table-btn-view" data-action="viewActivity">View</button><button class="table-btn table-btn-edit" data-action="addActivity">Edit</button></div></td></tr>
+                <tr><td>2</td><td>Toolbox Talk</td><td>David Chen</td><td>22</td><td>0.50</td><td>Workshop Area</td><td><div class="table-actions"><button class="table-btn table-btn-view" data-action="viewActivity">View</button><button class="table-btn table-btn-edit" data-action="addActivity">Edit</button></div></td></tr>
+                <tr><td>3</td><td>Emergency Drill</td><td>Fatima Al-Mansouri</td><td>31</td><td>1.25</td><td>Administration Block</td><td><div class="table-actions"><button class="table-btn table-btn-view" data-action="viewActivity">View</button><button class="table-btn table-btn-edit" data-action="addActivity">Edit</button></div></td></tr>
+                <tr><td>4</td><td>Safety Inspection</td><td>John Smith</td><td>9</td><td>0.75</td><td>Warehouse</td><td><div class="table-actions"><button class="table-btn table-btn-view" data-action="viewActivity">View</button><button class="table-btn table-btn-edit" data-action="addActivity">Edit</button></div></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-section" id="fire-alarms">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Emergency systems</p>
+            <h3>Fire alarm register</h3>
+          </div>
+          <button class="primary-btn" data-action="addFireAlarm">Add Fire Alarm Record</button>
+        </div>
+        <div class="kpi-grid compact">
+          <article class="kpi-card accent-red"><p>Total activations</p><strong>12</strong><span>This month</span></article>
+          <article class="kpi-card accent-blue"><p>Average response time</p><strong>3.8 min</strong><span>Security and FM response</span></article>
+          <article class="kpi-card accent-amber"><p>Resets completed</p><strong>11</strong><span>One pending technician closure</span></article>
+          <article class="kpi-card accent-green"><p>False alarm rate</p><strong>16.7%</strong><span>2 of 12 activations</span></article>
+        </div>
+        <div class="dashboard-grid">
+          <article class="panel-card">
+            <div class="panel-header"><h3>Alarm type split</h3></div>
+            <div class="h-bars">
+              <div><span>Smoke Detector</span><i style="width: 82%"></i><strong>6</strong></div>
+              <div><span>Heat Detector</span><i style="width: 46%"></i><strong>3</strong></div>
+              <div><span>Manual Call Point</span><i style="width: 32%"></i><strong>2</strong></div>
+              <div><span>Sounder Beacon</span><i style="width: 18%"></i><strong>1</strong></div>
+            </div>
+          </article>
+          <article class="panel-card">
+            <div class="panel-header"><h3>Response performance</h3></div>
+            <ul class="mini-list">
+              <li><span>Within 3 minutes</span><strong>7</strong></li>
+              <li><span>Within 5 minutes</span><strong>11</strong></li>
+              <li><span>Escalated to FM</span><strong>4</strong></li>
+              <li><span>Repeated locations</span><strong>2</strong></li>
+            </ul>
+          </article>
+          <article class="panel-card">
+            <div class="panel-header"><h3>Immediate attention</h3></div>
+            <div class="timeline compact-timeline">
+              <div class="timeline-item danger"><strong>Block C Laundry</strong><p>Two heat detector alarms in 7 days. Maintenance escalation required.</p></div>
+              <div class="timeline-item"><strong>Kitchen Block A</strong><p>Repeated cooking smoke alarm. Contractor awareness action open.</p></div>
+            </div>
+          </article>
+        </div>
+        <article class="panel-card">
+          <div class="panel-header"><h3>Alarm event log</h3><span class="badge neutral">Live register</span></div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Event ID</th>
+                  <th>Date & Time</th>
+                  <th>Building Name</th>
+                  <th>Room</th>
+                  <th>Device Type</th>
+                  <th>Responded By</th>
+                  <th>Response Time</th>
+                  <th>Reset Time</th>
+                  <th>Status</th>
+                  <th>Alarm Class</th>
+                  <th>Violator Company</th>
+                  <th>Remarks</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="fire-alarm-table-body">
+                <tr><td>FA-104</td><td>06 Apr 2026, 08:14</td><td>Block A</td><td>Kitchen 2</td><td>Smoke Detector</td><td>Security Team</td><td>3 min</td><td>11 min</td><td><span class="status-pill status-closed">Closed</span></td><td>False Alarm</td><td>NovaSteel</td><td>Cooking smoke triggered detector. Toolbox talk issued.</td><td><div class="table-actions"><button class="table-btn table-btn-view" data-action="viewFireAlarm">View</button><button class="table-btn table-btn-edit" data-action="editFireAlarm">Edit</button></div></td></tr>
+                <tr><td>FA-103</td><td>05 Apr 2026, 19:42</td><td>Clinic Building</td><td>Electrical Room</td><td>Manual Call Point</td><td>FM Supervisor</td><td>2 min</td><td>8 min</td><td><span class="status-pill status-closed">Closed</span></td><td>Test / Drill</td><td>Internal</td><td>False activation during testing.</td><td><div class="table-actions"><button class="table-btn table-btn-view" data-action="viewFireAlarm">View</button><button class="table-btn table-btn-edit" data-action="editFireAlarm">Edit</button></div></td></tr>
+                <tr><td>FA-102</td><td>04 Apr 2026, 14:25</td><td>Block C</td><td>Laundry Area</td><td>Heat Detector</td><td>HSE Officer</td><td>4 min</td><td>15 min</td><td><span class="status-pill status-progress">Under Review</span></td><td>Real Alarm</td><td>CleanWave</td><td>Dryer overheating. Equipment isolated and serviced.</td><td><div class="table-actions"><button class="table-btn table-btn-view" data-action="viewFireAlarm">View</button><button class="table-btn table-btn-edit" data-action="editFireAlarm">Edit</button></div></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-section" id="formulas">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Analytics</p>
+            <h3>HSE formulas and calculators</h3>
+          </div>
+          <button class="primary-btn" data-action="export">Export Formula Results</button>
+        </div>
+        <div class="kpi-grid compact">
+          <article class="kpi-card accent-green"><p>Current TRIR</p><strong id="formula-kpi-trir">0.41</strong><span>Live from calculator</span></article>
+          <article class="kpi-card accent-amber"><p>Current LTIFR</p><strong id="formula-kpi-ltifr">0.68</strong><span>Live from calculator</span></article>
+          <article class="kpi-card accent-blue"><p>Closure Rate</p><strong id="formula-kpi-closure">87.50%</strong><span>Live from calculator</span></article>
+          <article class="kpi-card accent-rose"><p>PPE Compliance</p><strong id="formula-kpi-ppe">95.92%</strong><span>Live from calculator</span></article>
+        </div>
+        <div class="dashboard-grid">
+          <article class="panel-card">
+            <div class="panel-header"><h3>Total Recordable Incident Rate</h3></div>
+            <p class="formula-text">TRIR = (Recordable Incidents × 200,000) / Total Hours Worked</p>
+            <div class="formula-grid">
+              <div class="field"><label for="trir-incidents">Recordable Incidents</label><input id="trir-incidents" type="number" min="0" value="3" /></div>
+              <div class="field"><label for="trir-hours">Hours Worked</label><input id="trir-hours" type="number" min="1" value="1465200" /></div>
+            </div>
+            <div class="formula-result"><span>Result</span><strong id="trir-result">0.41</strong></div>
+          </article>
+
+          <article class="panel-card">
+            <div class="panel-header"><h3>Lost Time Injury Frequency Rate</h3></div>
+            <p class="formula-text">LTIFR = (Lost Time Injuries × 1,000,000) / Total Hours Worked</p>
+            <div class="formula-grid">
+              <div class="field"><label for="ltifr-lti">Lost Time Injuries</label><input id="ltifr-lti" type="number" min="0" value="1" /></div>
+              <div class="field"><label for="ltifr-hours">Hours Worked</label><input id="ltifr-hours" type="number" min="1" value="1465200" /></div>
+            </div>
+            <div class="formula-result"><span>Result</span><strong id="ltifr-result">0.68</strong></div>
+          </article>
+
+          <article class="panel-card">
+            <div class="panel-header"><h3>Severity Rate</h3></div>
+            <p class="formula-text">Severity Rate = (Lost Days × 200,000) / Total Hours Worked</p>
+            <div class="formula-grid">
+              <div class="field"><label for="severity-days">Lost Days</label><input id="severity-days" type="number" min="0" value="16" /></div>
+              <div class="field"><label for="severity-hours">Hours Worked</label><input id="severity-hours" type="number" min="1" value="1465200" /></div>
+            </div>
+            <div class="formula-result"><span>Result</span><strong id="severity-result">2.18</strong></div>
+          </article>
+
+          <article class="panel-card">
+            <div class="panel-header"><h3>Action Closure Rate</h3></div>
+            <p class="formula-text">Closure Rate = (Closed Actions / Total Actions) × 100</p>
+            <div class="formula-grid">
+              <div class="field"><label for="closure-closed">Closed Actions</label><input id="closure-closed" type="number" min="0" value="126" /></div>
+              <div class="field"><label for="closure-total">Total Actions</label><input id="closure-total" type="number" min="1" value="144" /></div>
+            </div>
+            <div class="formula-result"><span>Result</span><strong id="closure-result">87.50%</strong></div>
+          </article>
+
+          <article class="panel-card">
+            <div class="panel-header"><h3>Training Hours Per Person</h3></div>
+            <p class="formula-text">Training Hours Per Person = Total Training Hours / Total Attendees</p>
+            <div class="formula-grid">
+              <div class="field"><label for="training-hours-total">Training Hours</label><input id="training-hours-total" type="number" min="0" step="0.1" value="157.3" /></div>
+              <div class="field"><label for="training-attendees">Attendees</label><input id="training-attendees" type="number" min="1" value="145" /></div>
+            </div>
+            <div class="formula-result"><span>Result</span><strong id="training-ratio-result">1.08 hrs</strong></div>
+          </article>
+
+          <article class="panel-card">
+            <div class="panel-header"><h3>PPE Compliance Rate</h3></div>
+            <p class="formula-text">PPE Compliance = (Compliant Observations / Total PPE Checks) × 100</p>
+            <div class="formula-grid">
+              <div class="field"><label for="ppe-compliant">Compliant Checks</label><input id="ppe-compliant" type="number" min="0" value="188" /></div>
+              <div class="field"><label for="ppe-total">Total PPE Checks</label><input id="ppe-total" type="number" min="1" value="196" /></div>
+            </div>
+            <div class="formula-result"><span>Result</span><strong id="ppe-result">95.92%</strong></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="risk">
+        <div class="section-head"><div><p class="eyebrow">Planning and assurance</p><h3>Risk register and controls</h3></div><button class="primary-btn" data-action="newRisk">New Risk Entry</button></div>
+        <div class="dashboard-grid">
+          <article class="panel-card">
+            <div class="panel-header"><h3>Top residual risks</h3></div>
+            <ul class="priority-list" id="risk-list">
+              <li><span>Excavation collapse</span><strong>Very High</strong></li>
+              <li><span>Crane interface with public road</span><strong>High</strong></li>
+              <li><span>Confined space toxic exposure</span><strong>High</strong></li>
+              <li><span>Temporary power failure</span><strong>Medium</strong></li>
+            </ul>
+          </article>
+          <article class="panel-card span-2">
+            <div class="panel-header"><h3>Control owners</h3></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Risk</th><th>Owner</th><th>Controls in place</th><th>Assurance date</th></tr></thead>
+                <tbody>
+                  <tr><td>Dropped object</td><td>Robert Stevens</td><td>Tool tethering, exclusion zones, lift plans</td><td>09 Apr 2026</td></tr>
+                  <tr><td>Heat stress</td><td>Nadia Saleh</td><td>Work-rest cycles, hydration tents, wearable alerts</td><td>06 Apr 2026</td></tr>
+                  <tr><td>Excavation collapse</td><td>Ahmed Jalil</td><td>Shoring design, inspections, permit gate</td><td>06 Apr 2026</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="audits">
+        <div class="section-head"><div><p class="eyebrow">Verification</p><h3>Audits and inspections</h3></div><button class="primary-btn" data-action="scheduleAudit">Schedule Audit</button></div>
+        <div class="split-grid">
+          <article class="panel-card">
+            <div class="panel-header"><h3>Inspection performance</h3></div>
+            <ul class="mini-list">
+              <li><span>Planned this month</span><strong>38</strong></li>
+              <li><span>Completed</span><strong>31</strong></li>
+              <li><span>Overdue</span><strong>3</strong></li>
+              <li><span>Average score</span><strong>91%</strong></li>
+            </ul>
+          </article>
+          <article class="panel-card">
+            <div class="panel-header"><h3>Upcoming program</h3></div>
+            <div class="timeline compact-timeline" id="audit-timeline">
+              <div class="timeline-item"><strong>07 Apr | Lifting gear inspection</strong><p>Third-party verifier with plant manager</p></div>
+              <div class="timeline-item"><strong>08 Apr | Emergency response drill</strong><p>Simulated confined space rescue at pump chamber</p></div>
+              <div class="timeline-item"><strong>10 Apr | ISO 45001 compliance audit</strong><p>Corporate assurance team on site</p></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="training">
+        <div class="section-head"><div><p class="eyebrow">Competency</p><h3>Training and inductions</h3></div><button class="primary-btn" data-action="assignTraining">Assign Training</button></div>
+        <div class="dashboard-grid">
+          <article class="panel-card">
+            <div class="panel-header"><h3>Training matrix</h3></div>
+            <ul class="mini-list">
+              <li><span>Inductions complete</span><strong>96%</strong></li>
+              <li><span>Work at height certified</span><strong>84%</strong></li>
+              <li><span>Scaffold user certified</span><strong>73%</strong></li>
+              <li><span>First aid coverage</span><strong>18 people</strong></li>
+            </ul>
+          </article>
+          <article class="panel-card span-2">
+            <div class="panel-header"><h3>Upcoming expiries</h3></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Name</th><th>Employer</th><th>Certification</th><th>Expires</th><th>Status</th></tr></thead>
+                <tbody id="training-table-body">
+                  <tr><td>Yousef Karim</td><td>SkyForm</td><td>Scaffold inspector</td><td>08 Apr 2026</td><td><span class="status-pill status-open">Due Soon</span></td></tr>
+                  <tr><td>Maria Garcia</td><td>CoreBuild</td><td>Confined space entrant</td><td>10 Apr 2026</td><td><span class="status-pill status-progress">Booked</span></td></tr>
+                  <tr><td>Hassan Malik</td><td>CoreBuild</td><td>Working at height</td><td>12 Apr 2026</td><td><span class="status-pill status-open">Due Soon</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="assets">
+        <div class="section-head"><div><p class="eyebrow">Operational readiness</p><h3>Assets, inspections, and PPE</h3></div><button class="primary-btn" data-action="addAsset">Add Asset</button></div>
+        <div class="split-grid">
+          <article class="panel-card">
+            <div class="panel-header"><h3>Equipment status</h3></div>
+            <ul class="mini-list">
+              <li><span>Registered assets</span><strong>84</strong></li>
+              <li><span>Inspection due today</span><strong>9</strong></li>
+              <li><span>Out of service</span><strong>2</strong></li>
+              <li><span>PPE stock health</span><strong>88%</strong></li>
+            </ul>
+          </article>
+          <article class="panel-card">
+            <div class="panel-header"><h3>PPE inventory</h3></div>
+            <div class="h-bars">
+              <div><span>Harnesses</span><i style="width: 83%"></i><strong>62</strong></div>
+              <div><span>Fire-retardant coveralls</span><i style="width: 67%"></i><strong>108</strong></div>
+              <div><span>Gas detectors</span><i style="width: 41%"></i><strong>14</strong></div>
+              <div><span>Face shields</span><i style="width: 58%"></i><strong>45</strong></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="documents">
+        <div class="section-head"><div><p class="eyebrow">Governance</p><h3>Documents and compliance</h3></div><button class="primary-btn" data-action="uploadDocument">Upload Document</button></div>
+        <div class="dashboard-grid">
+          <article class="panel-card">
+            <div class="panel-header"><h3>Document control</h3></div>
+            <ul class="mini-list">
+              <li><span>Controlled documents</span><strong>267</strong></li>
+              <li><span>Pending approval</span><strong>11</strong></li>
+              <li><span>Expired documents</span><strong>3</strong></li>
+              <li><span>Legal register current</span><strong>98%</strong></li>
+            </ul>
+          </article>
+          <article class="panel-card span-2">
+            <div class="panel-header"><h3>Recent compliance items</h3></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Document</th><th>Type</th><th>Owner</th><th>Review Date</th><th>Status</th></tr></thead>
+                <tbody id="documents-table-body">
+                  <tr><td>Emergency Response Plan Rev 8</td><td>Controlled</td><td>HSE Manager</td><td>11 Apr 2026</td><td><span class="status-pill status-progress">In Review</span></td></tr>
+                  <tr><td>Subcontractor HSE Plan - NovaSteel</td><td>Approval</td><td>Package Lead</td><td>06 Apr 2026</td><td><span class="status-pill status-open">Pending</span></td></tr>
+                  <tr><td>Waste manifest register</td><td>Environmental</td><td>Env. Coordinator</td><td>15 Apr 2026</td><td><span class="status-pill status-closed">Current</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="people">
+        <div class="section-head"><div><p class="eyebrow">Workforce assurance</p><h3>People and contractors</h3></div><button class="primary-btn" data-action="addContractor">Add Contractor</button></div>
+        <div class="split-grid">
+          <article class="panel-card">
+            <div class="panel-header"><h3>Workforce breakdown</h3></div>
+            <ul class="mini-list">
+              <li><span>Employees</span><strong>74</strong></li>
+              <li><span>Contractors</span><strong>118</strong></li>
+              <li><span>Visitors</span><strong>11</strong></li>
+              <li><span>High-risk workers cleared</span><strong>89%</strong></li>
+            </ul>
+          </article>
+          <article class="panel-card">
+            <div class="panel-header"><h3>Top contractor compliance</h3></div>
+            <div class="h-bars">
+              <div><span>CoreBuild</span><i style="width: 91%"></i><strong>97%</strong></div>
+              <div><span>NovaSteel</span><i style="width: 79%"></i><strong>88%</strong></div>
+              <div><span>SkyForm</span><i style="width: 64%"></i><strong>81%</strong></div>
+              <div><span>LiftPro</span><i style="width: 58%"></i><strong>76%</strong></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="staff">
+        <div class="section-head"><div><p class="eyebrow">Organization</p><h3>Staff management</h3></div><div class="topbar-actions"><button class="ghost-btn" data-action="filterStaff">Filters</button><button class="ghost-btn" data-action="exportStaff">Export to Excel</button><button class="primary-btn" data-action="addStaff">Add New Staff</button></div></div>
+        <article class="panel-card">
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Full Name</th><th>Staff Type</th><th>Job Title</th><th>Nationality</th><th>Phone</th><th>Email</th><th>Status</th><th>Actions</th></tr></thead>
+              <tbody id="staff-table-body">
+                <tr><td>John Smith</td><td>HSE</td><td>HSE Manager</td><td>United States</td><td>+1-555-0101</td><td>john.smith@example.com</td><td><span class="status-pill status-closed">Active</span></td><td><div class="table-actions"><button class="table-btn table-btn-edit" data-action="editStaff">Edit</button></div></td></tr>
+                <tr><td>Sarah Johnson</td><td>HSE</td><td>HSE Officer</td><td>United Kingdom</td><td>+44-20-7946-0958</td><td>sarah.johnson@example.com</td><td><span class="status-pill status-closed">Active</span></td><td><div class="table-actions"><button class="table-btn table-btn-edit" data-action="editStaff">Edit</button></div></td></tr>
+                <tr><td>Ahmed Hassan</td><td>Production</td><td>Project Manager</td><td>Egypt</td><td>+20-2-1234-5678</td><td>ahmed.hassan@example.com</td><td><span class="status-pill status-closed">Active</span></td><td><div class="table-actions"><button class="table-btn table-btn-edit" data-action="editStaff">Edit</button></div></td></tr>
+                <tr><td>Maria Garcia</td><td>Production</td><td>Construction Manager</td><td>Spain</td><td>+34-91-123-4567</td><td>maria.garcia@example.com</td><td><span class="status-pill status-closed">Active</span></td><td><div class="table-actions"><button class="table-btn table-btn-edit" data-action="editStaff">Edit</button></div></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-section" id="settings">
+        <div class="section-head"><div><p class="eyebrow">System administration</p><h3>Settings and master data</h3></div><div class="topbar-actions"><button class="ghost-btn" data-action="reviewApp">Review App</button><button class="ghost-btn" data-action="contactSupport">Contact Us</button></div></div>
+        <div class="settings-switcher">
+          <button class="settings-switch active">General</button>
+          <button class="settings-switch">Observation</button>
+          <button class="settings-switch">Incidents</button>
+          <button class="settings-switch">Permit to Work</button>
+        </div>
+        <div class="settings-tabs">
+          <span class="settings-chip active">Main Info</span>
+          <span class="settings-chip">Countries</span>
+          <span class="settings-chip">Education Levels</span>
+          <span class="settings-chip">Job Title / HSE Roles</span>
+          <span class="settings-chip">Production Team Roles</span>
+          <span class="settings-chip">Specializations</span>
+          <span class="settings-chip">Project / Site Areas</span>
+        </div>
+        <article class="panel-card company-card">
+          <div class="panel-header"><div><p class="eyebrow">General setup</p><h3>Company information</h3></div><button class="primary-btn" data-action="editCompany">Update Company</button></div>
+          <p>Review the details provided during license activation and manage the core settings used across the system.</p>
+          <div class="company-grid">
+            <div class="info-box"><span>Company Name</span><strong>Demo Construction Company</strong></div>
+            <div class="info-box"><span>Project Name</span><strong>Demo Project Site</strong></div>
+            <div class="info-box"><span>Project Location</span><strong>Demo Location</strong></div>
+            <div class="info-box"><span>User Email</span><strong>demo@hsebox.com</strong></div>
+          </div>
+          <div class="logo-panel">
+            <div class="logo-box logo-box-filled">
+              <img src="https://labotel.ae/assets/img/logo.png" alt="Labotel logo" />
+            </div>
+            <div>
+              <h4>Company Logo</h4>
+              <p>Labotel brand identity is applied across the dashboard, reports, printed permits, and exported forms.</p>
+              <button class="primary-btn" data-action="uploadLogo">Update Logo</button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modal-backdrop" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-head">
+        <div>
+          <p class="eyebrow">Action center</p>
+          <h3 id="modal-title">Create record</h3>
+        </div>
+        <button class="icon-btn" id="modal-close" aria-label="Close modal">×</button>
+      </div>
+      <p class="modal-copy" id="modal-copy"></p>
+      <form id="action-form" class="action-form"></form>
+      <div class="modal-actions">
+        <button class="ghost-btn" id="modal-cancel" type="button">Cancel</button>
+        <button class="primary-btn" id="modal-submit" type="submit" form="action-form">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-stack" id="toast-stack" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
